@@ -1,97 +1,217 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}
-샌딩/우주종합철거
-{% endblock %}
-{% block main_1 %}
-<div class = 'main_detail_demolition'>
-    <div class = 'main_detail_demolition_images'>
-        <img src = '{% static "img/sanding/before001.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
-        <img src = '{% static "img/sanding/after001.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div id = 'top'></div>
+    <!-- 잔상 효과를 위한 여러 개의 이미지 -->
+    <!-- <img src="../static/img/floating-image.png" alt="Cursor Image" class="cursor-trail" id="cursorTrail1">
+    <img src="../static/img/floating-image.png" alt="Cursor Image" class="cursor-trail" id="cursorTrail2"> -->
     
-    <div class = 'main_detail_demolition_images'>
-        <img src = '{% static "img/sanding/before002.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
-        <img src = '{% static "img/sanding/after002.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../static/css/styles.css">
     
-    <div class = 'main_detail_demolition_images'>
-        <h2>
-            샌딩!
-        </h2>
-        <p>
-            마우스를 올려보세요!
-        </p>
-        <img src = '{% static "img/sanding/before003.jpg" %}' id = 'main_detail_container_image_center'>
-        <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
-        <img src = '{% static "img/sanding/after003.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
-    </div>
-    
-    <div class = 'main_detail_demolition_images'>
-        <img src = '{% static "img/sanding/before004.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
-        <img src = '{% static "img/sanding/after004.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
-    </div>
-    
-    <div class = 'main_detail_demolition_images'>
-        <img src = '{% static "img/sanding/before005.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
-        <img src = '{% static "img/sanding/after005.jpg" %}' class = 'main_detail_container_image'>
-        <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
-    </div>
+    <title>
+            우주종합철거!
+    </title>
+</head>
+<body>
+    <nav class = 'nav_menu'>
+        <div class = 'nav_menu1'>
+            <a href = '/'>
+                <img src = "../static/img/logo.png" id = logo>
+            </a>
+        </div>
+        <div class = 'nav_menu2'>
+            회사소개
+            <div id = 'nav_menu_drop'>
+                <a href = './vision.html' class = 'link_style'>비젼</a>
+            </div>
+        </div>
+        <div class = 'nav_menu3'>
+            서비스
+            <div id = 'nav_menu_drop'>
+                <ul>
+                    <li>
+                        <a href = '/demolition.html' class = 'link_style'>종합철거</a>
+                    </li>
+                    <li>
+                        <a href = '/sanding.html' class = 'link_style'>샌딩</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class = 'nav_menu4'>
+            우리들
+            <div id = 'nav_menu_drop'>
+                <a href = '/weare.html' class = 'link_style'>이야기</a>
+            </div>
+        </div>
+        <div class = 'nav_menu5'>
+            예약하기
+            <div id = 'nav_menu_drop'>
+                (준비중)
+            </div>
+        </div>
+    </nav>
+    <div class = 'main_1'>
+        <div class = 'main_detail_demolition'>
+            <div class = 'main_detail_demolition_images'>
+                <img src = '/static/img/demolition/before001.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
+                <img src = '/static/img/demolition/after001.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
+            </div>
+            
+            <div class = 'main_detail_demolition_images'>
+                <img src = '/static/img/demolition/before002.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
+                <img src = '/static/img/demolition/after002.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
+            </div>
+            
+            <div class = 'main_detail_demolition_images'>
+                <h2>
+                    샌딩!
+                </h2>
+                <p>
+                    마우스를 올려보세요!
+                </p>
+                <img src = '/static/img/demolition/before003.jpg' id = 'main_detail_container_image_center'>
+                <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
+                <img src = '/static/img/demolition/after003.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
+            </div>
+            
+            <div class = 'main_detail_demolition_images'>
+                <img src = '/static/img/demolition/before004.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
+                <img src = '/static/img/demolition/after004.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
+            </div>
+            
+            <div class = 'main_detail_demolition_images'>
+                <img src = '/static/img/demolition/before005.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_before'>우주종합철거 오기 전!</div>
+                <img src = '/static/img/demolition/before005.jpg' class = 'main_detail_container_image'>
+                <div class = 'overlay_image_after'>우주종합철거 작업 후!</div>
+            </div>
 
-</div>
-{% endblock %}
-
-{% block main_2 %}
-
-<div class = 'main_detail'>
-    <div class = 'main_detail1'>
-        철거 외길 인생!<br>
-        철거의 대명사,<br>
-        <div id = 'strong'>
-            우주종합철거
         </div>
     </div>
-    <div class = 'main_detail2'>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        깔끔한 결과 보시고,<br>
-        편하게 연락 주세요!<br>
-        <a href = '/services/sanding/'>
-        <button class = 'bta'>
-            우주종합<br>
-            실력보기!
-        </button>
-        </a>
+    <div class = 'main_2'>
+        <div class = 'main_detail'>
+            <div class = 'main_detail1'>
+                철거 외길 인생!<br>
+                철거의 대명사,<br>
+                <div id = 'strong'>
+                    우주종합철거
+                </div>
+            </div>
+            <div class = 'main_detail2'>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                깔끔한 결과 보시고,<br>
+                편하게 연락 주세요!<br>
+                <a href = '/demolition.html'>
+                <button class = 'bta'>
+                    우주종합<br>
+                    실력보기!
+                </button>
+                </a>
+            </div>
     </div>
-    
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const element = document.querySelector('.main_detail_vision');
-        element.style.animationDelay = '0.5s'; // 원하는 지연 시간 설정 (선택 사항)
+    <footer class = 'footer'>
+        <div class = 'footer_1'>
+            <a href = 'https://www.instagram.com/woojoo_universal_demolition/profilecard/?igsh=bW05MTN5MGZ1NWR1' target="_blank"><img src = "../static/img/instagram.webp" class = 'footer_logo'></a>
+            <a href = 'https://blog.naver.com/i0164466' target="_blank"><img src = "../static/img/Naver_blog.svg" class = 'footer_logo'></a>
+            <a href = 'http://pf.kakao.com/_zYyNG' target="_blank"><img src = "../static/img/KakaoTalk_logo.svg" class = 'footer_logo'></a>
+        </div>
+        <div class = 'footer_2'>
+            대표 전화 : 1588-2984
+        </div>
+        <div class = 'footer_3'>
+            ⓒ 2022. 우주종합철거 Co. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+
+/****************************************/
+/*************공통************************/
+/****************************************/
+    // 잔상 효과를 위한 이미지 요소 배열
+    /*
+    const trails = [
+        document.getElementById("cursorTrail1"),
+        document.getElementById("cursorTrail2"),
+
+    ];
+
+    // 마우스 이동 이벤트 리스너 추가
+    document.addEventListener("mousemove", (event) => {
+        const mouseX = event.pageX;
+        const mouseY = event.pageY;
+
+        // 각 잔상 이미지가 약간 늦게 마우스를 따라오게 설정
+        trails.forEach((trail, index) => {
+            setTimeout(() => {
+                trail.style.left = `${mouseX}px`;
+                trail.style.top = `${mouseY}px`;
+            }, index * 50); // 각 잔상이 약간씩 딜레이되도록 설정
+        });
     });
 
-        // 스크롤 이벤트로 요소 감지
-    document.addEventListener('scroll', function () {
-        const elements = document.querySelectorAll('.main_detail_vision, .main_detail1, .main_detail2');
+
+
+
+    // 클릭 시 pulse 애니메이션 적용
+    document.addEventListener("mousedown", () => {
+        trails.forEach(trail => {
+            trail.classList.add("pulse");
+        });
+    });
+
+    document.addEventListener("mouseup", () => {
+        trails.forEach(trail => {
+            trail.classList.remove("pulse");
+        });
+    });
+
+    // 클릭 가능한 요소 위에 있을 때 pulse 효과 추가
+    document.querySelectorAll("a, button, .clickable").forEach(element => {
+        element.addEventListener("mouseover", () => {
+            trails.forEach(trail => trail.classList.add("pulse"));
+        });
+        element.addEventListener("mouseout", () => {
+            trails.forEach(trail => trail.classList.remove("pulse"));
+        });
+    });
+    */
+/****************************************/
+/*************공통************************/
+/****************************************/
+    document.addEventListener('wheel', function (event) {
+        if (event.ctrlKey) {
+            event.preventDefault(); // Ctrl + 휠 동작을 비활성화
+        }
+    }, { passive: false });
+
+            // 스크롤 이벤트로 요소 감지
+            document.addEventListener('scroll', function () {
+        const elements = document.querySelectorAll('.main_detail1, .main_detail2');
         const windowHeight = window.innerHeight;
 
         elements.forEach(element => {
@@ -104,7 +224,4 @@
             }
         });
     });
-
-    </script>
-</div>
-{% endblock %}
+</script>

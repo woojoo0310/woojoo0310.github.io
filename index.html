@@ -3,8 +3,8 @@
 <head>
     <div id = 'top'></div>
     <!-- 잔상 효과를 위한 여러 개의 이미지 -->
-    <img src="../static/img/floating-image.png" alt="Cursor Image" class="cursor-trail" id="cursorTrail1">
-    <img src="../static/img/floating-image.png" alt="Cursor Image" class="cursor-trail" id="cursorTrail2">
+    <!-- <img src="../static/img/floating-image.png" alt="Cursor Image" class="cursor-trail" id="cursorTrail1">
+    <img src="../static/img/floating-image.png" alt="Cursor Image" class="cursor-trail" id="cursorTrail2"> -->
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -24,7 +24,7 @@
         <div class = 'nav_menu2'>
             회사소개
             <div id = 'nav_menu_drop'>
-                <a href = '/vision/' class = 'link_style'>비젼</a>
+                <a href = './vision.html' class = 'link_style'>비젼</a>
             </div>
         </div>
         <div class = 'nav_menu3'>
@@ -32,10 +32,10 @@
             <div id = 'nav_menu_drop'>
                 <ul>
                     <li>
-                        <a href = '/services/demolition/' class = 'link_style'>종합철거</a>
+                        <a href = '/demolition.html' class = 'link_style'>종합철거</a>
                     </li>
                     <li>
-                        <a href = '/services/sanding/' class = 'link_style'>샌딩</a>
+                        <a href = '/sanding.html' class = 'link_style'>샌딩</a>
                     </li>
                 </ul>
             </div>
@@ -43,7 +43,7 @@
         <div class = 'nav_menu4'>
             우리들
             <div id = 'nav_menu_drop'>
-                <a href = '/weare/' class = 'link_style'>이야기</a>
+                <a href = '/weare.html' class = 'link_style'>이야기</a>
             </div>
         </div>
         <div class = 'nav_menu5'>
@@ -82,7 +82,7 @@
                 <br>
                 깔끔한 결과 보시고,<br>
                 편하게 연락 주세요!<br>
-                <a href = '/templates/demolition.html'>
+                <a href = '/demolition.html'>
                 <button class = 'bta'>
                     우주종합<br>
                     실력보기!
@@ -112,6 +112,7 @@
 /*************공통************************/
 /****************************************/
     // 잔상 효과를 위한 이미지 요소 배열
+    /*
     const trails = [
         document.getElementById("cursorTrail1"),
         document.getElementById("cursorTrail2"),
@@ -157,6 +158,7 @@
             trails.forEach(trail => trail.classList.remove("pulse"));
         });
     });
+    */
 /****************************************/
 /*************공통************************/
 /****************************************/
