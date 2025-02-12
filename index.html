@@ -1,49 +1,173 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}
-우주종합철거
-{% endblock %}
-{% block main_1 %}
-<video src = "{% static 'img/main.mp4' %}" id = 'main_video' autoplay loop>
-</video>
-{% endblock %}
-
-{% block main_2 %}
-<div class = 'main_detail'>
-    <div class = 'main_detail1'>
-        철거 외길 인생!<br>
-        철거의 대명사,<br>
-        <div id = 'strong'>
-            우주종합철거
-        </div>
-    </div>
-    <div class = 'main_detail2'>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        깔끔한 결과 보시고,<br>
-        편하게 연락 주세요!<br>
-        <a href = '/services/demolition/'>
-        <button class = 'bta'>
-            우주종합<br>
-            실력보기!
-        </button>
-        </a>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div id = 'top'></div>
+    <!-- 잔상 효과를 위한 여러 개의 이미지 -->
+    <img src="../static/img/floating-image.png" alt="Cursor Image" class="cursor-trail" id="cursorTrail1">
+    <img src="../static/img/floating-image.png" alt="Cursor Image" class="cursor-trail" id="cursorTrail2">
     
-    <script>
-        // 스크롤 이벤트로 요소 감지
-    document.addEventListener('scroll', function () {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    
+    <title>
+            우주종합철거!
+    </title>
+</head>
+<body>
+    <nav class = 'nav_menu'>
+        <div class = 'nav_menu1'>
+            <a href = '/'>
+                <img src = "../static/img/logo.png" id = logo>
+            </a>
+        </div>
+        <div class = 'nav_menu2'>
+            회사소개
+            <div id = 'nav_menu_drop'>
+                <a href = '/vision/' class = 'link_style'>비젼</a>
+            </div>
+        </div>
+        <div class = 'nav_menu3'>
+            서비스
+            <div id = 'nav_menu_drop'>
+                <ul>
+                    <li>
+                        <a href = '/services/demolition/' class = 'link_style'>종합철거</a>
+                    </li>
+                    <li>
+                        <a href = '/services/sanding/' class = 'link_style'>샌딩</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class = 'nav_menu4'>
+            우리들
+            <div id = 'nav_menu_drop'>
+                <a href = '/weare/' class = 'link_style'>이야기</a>
+            </div>
+        </div>
+        <div class = 'nav_menu5'>
+            예약하기
+            <div id = 'nav_menu_drop'>
+                (준비중)
+            </div>
+        </div>
+    </nav>
+    <div class = 'main_1'>
+        <video src = "../static/img/main.mp4" id = 'main_video' autoplay loop>
+        </video>
+    </div>
+    <div class = 'main_2'>
+        <div class = 'main_detail'>
+            <div class = 'main_detail1'>
+                철거 외길 인생!<br>
+                철거의 대명사,<br>
+                <div id = 'strong'>
+                    우주종합철거
+                </div>
+            </div>
+            <div class = 'main_detail2'>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                깔끔한 결과 보시고,<br>
+                편하게 연락 주세요!<br>
+                <a href = '/templates/demolition.html'>
+                <button class = 'bta'>
+                    우주종합<br>
+                    실력보기!
+                </button>
+                </a>
+            </div>
+    </div>
+    <footer class = 'footer'>
+        <div class = 'footer_1'>
+            <a href = 'https://www.instagram.com/woojoo_universal_demolition/profilecard/?igsh=bW05MTN5MGZ1NWR1' target="_blank"><img src = "../static/img/instagram.webp" class = 'footer_logo'></a>
+            <a href = 'https://blog.naver.com/i0164466' target="_blank"><img src = "../static/img/Naver_blog.svg" class = 'footer_logo'></a>
+            <a href = 'http://pf.kakao.com/_zYyNG' target="_blank"><img src = "../static/img/KakaoTalk_logo.svg" class = 'footer_logo'></a>
+        </div>
+        <div class = 'footer_2'>
+            대표 전화 : 1588-2984
+        </div>
+        <div class = 'footer_3'>
+            ⓒ 2022. 우주종합철거 Co. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+
+/****************************************/
+/*************공통************************/
+/****************************************/
+    // 잔상 효과를 위한 이미지 요소 배열
+    const trails = [
+        document.getElementById("cursorTrail1"),
+        document.getElementById("cursorTrail2"),
+
+    ];
+
+    // 마우스 이동 이벤트 리스너 추가
+    document.addEventListener("mousemove", (event) => {
+        const mouseX = event.pageX;
+        const mouseY = event.pageY;
+
+        // 각 잔상 이미지가 약간 늦게 마우스를 따라오게 설정
+        trails.forEach((trail, index) => {
+            setTimeout(() => {
+                trail.style.left = `${mouseX}px`;
+                trail.style.top = `${mouseY}px`;
+            }, index * 50); // 각 잔상이 약간씩 딜레이되도록 설정
+        });
+    });
+
+
+
+
+    // 클릭 시 pulse 애니메이션 적용
+    document.addEventListener("mousedown", () => {
+        trails.forEach(trail => {
+            trail.classList.add("pulse");
+        });
+    });
+
+    document.addEventListener("mouseup", () => {
+        trails.forEach(trail => {
+            trail.classList.remove("pulse");
+        });
+    });
+
+    // 클릭 가능한 요소 위에 있을 때 pulse 효과 추가
+    document.querySelectorAll("a, button, .clickable").forEach(element => {
+        element.addEventListener("mouseover", () => {
+            trails.forEach(trail => trail.classList.add("pulse"));
+        });
+        element.addEventListener("mouseout", () => {
+            trails.forEach(trail => trail.classList.remove("pulse"));
+        });
+    });
+/****************************************/
+/*************공통************************/
+/****************************************/
+    document.addEventListener('wheel', function (event) {
+        if (event.ctrlKey) {
+            event.preventDefault(); // Ctrl + 휠 동작을 비활성화
+        }
+    }, { passive: false });
+
+            // 스크롤 이벤트로 요소 감지
+            document.addEventListener('scroll', function () {
         const elements = document.querySelectorAll('.main_detail1, .main_detail2');
         const windowHeight = window.innerHeight;
 
@@ -57,9 +181,4 @@
             }
         });
     });
-
-    </script>
-</div>
-
-{% endblock %}
-
+</script>
